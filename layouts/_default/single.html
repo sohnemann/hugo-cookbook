@@ -62,12 +62,12 @@
     </div>
     {{ end }}
 
-    {{ if isset .Params "author" }}
+    {{ with .Params.author }}
     <div class="author">
       <svg class="icon">
         <use xlink:href="/fontawesome-free-5.13.0-web/sprites/solid.svg#user"></use>
       </svg>
-      {{ title .Params.author }}
+      {{ title . }}
     </div>
     {{ end }}
   </div>
@@ -75,27 +75,38 @@
   <div class="wrapper">
     <div class="items">
 
-      <div class="ingredients">
-        <table>
-          <th class="table_header">Ingredients</th>
-          {{ range .Params.ingredients  }}
-          <tr>
-            <td>{{ . }}</td>
-          </tr>
-          {{ end }}
-        </table>
-      </div>
+{{ if isset .Params "ingredients" }}
+<div class="ingredients">
+  <table>
+    <th class="table_header">Ingredients</th>
+{{ range .Params.ingredients }}
+<tr>
+    {{ if isset . 1}}
+    <td class="amount">{{ index . 0}}</td>
+    <td class="ingredient">{{ index . 1}}</td>
+  {{ else }}
+  <td class="amount"></td>
+  <td class="ingredient">{{ index . 0}}</td>
+  {{ end }}
+</tr>
+{{ end }}
+  </table>
+</div>
+{{ end }}
 
-      <div class="utensils">
-        <table>
-          <th class="table_header">Utensils</th>
-          {{ range .Params.utensils }}
-          <tr>
-            <td>{{ . }}</td>
-          </tr>
-          {{ end }}
-        </table>
-      </div>
+{{ with .Params.utensils }}
+<div class="utensils">
+  <table>
+    <th class="table_header">Utensils</th>
+    {{ range . }}
+    <tr>
+      <td>{{ . }}</td>
+    </tr>
+    {{ end }}
+  </table>
+</div>
+{{ end }}
+
 </div>
 
     <div class="content">

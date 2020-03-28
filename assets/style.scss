@@ -235,6 +235,17 @@ float:right;
 }
 
 .ingredients, .utensils {
+table-layout: fixed;
+}
+
+.amount{
+width:auto;
+white-space:nowrap;
+}
+
+.ingredient {
+  width: auto;
+
 }
 
 .content {

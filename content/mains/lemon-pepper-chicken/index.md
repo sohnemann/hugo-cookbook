@@ -4,7 +4,7 @@ title: Lemon Pepper Chicken
 
 # displays the coverimage - please use landscape-format photos
 # please refrain from using copyrighted photos!
-coverimage: images/lemon-pepper-chicken.jpg
+coverimage: lemon-pepper-chicken.jpg
 
 # shows a subtitle under the heading
 subtitle: ""
@@ -59,7 +59,7 @@ ingredients:
 
 # list of the utensils used
 utensils:
-  - pan
+  - large
 
 # add the instructions below in markdown-syntax
 ---

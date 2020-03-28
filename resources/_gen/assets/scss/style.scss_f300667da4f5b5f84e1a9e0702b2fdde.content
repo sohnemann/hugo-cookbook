@@ -189,6 +189,16 @@ display: inline-block;}
   float: right;
   font-family: "Roboto"; }
 
+.ingredients, .utensils {
+  table-layout: fixed; }
+
+.amount {
+  width: auto;
+  white-space: nowrap; }
+
+.ingredient {
+  width: auto; }
+
 .content {
   margin-top: 2.35em;
   font-size: 1rem;
