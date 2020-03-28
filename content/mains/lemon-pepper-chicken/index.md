@@ -38,28 +38,27 @@ author: sarah
 
 # list of the ingredients used
 ingredients:
-  - 2 tbsp butter
-  - 1 tbsp olive oil
-  - 1/2 tsp lemon juice
-  - 1/2 tsp honey
-  - 1 capsicum
-  - half a cauliflower
-  - half a leek
-  - half a lemon zest
-  - 1 1/2 tbsp lemon juice
-  - 4 1/2 tbsp flour
-  - 3 tsp lemon pepper
-  - 1 1/2 tsp garlic
-  - 2 cups chicken stock
-  - 2 1/4 cups boiling water
-  - 1/3 bag of baby spinach
-  - 900g chicken thighs
-  - 300g natural yoghurt
-  - salt
+  - [2 tbsp, butter]
+  - [1 tbsp, olive oil]
+  - [1/2 tsp, lemon juice]
+  - [1/2 tsp, honey]
+  - [1, capsicum]
+  - [1/2, cauliflower]
+  - [1/2, leek]
+  - [1/2, lemon ]
+  - [1 1/2 tbsp, lemon juice]
+  - [4 1/2 tbsp, flour]
+  - [3 tsp, lemon pepper]
+  - [1 1/2 tsp, garlic]
+  - [2 cups, chicken stock]
+  - [2 1/4 cups, boiling water]
+  - [1/3, bag of baby spinach]
+  - [900g, chicken thighs]
+  - [300g, natural yoghurt]
+  - [1,pinch of salt]
 
 # list of the utensils used
 utensils:
-  - large
 
 # add the instructions below in markdown-syntax
 ---

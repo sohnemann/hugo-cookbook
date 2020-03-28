@@ -37,7 +37,7 @@ author: name
 
 # list of the ingredients used
 ingredients:
-  - 2 tbsp butter
+  - [2,tbsp butter]
 
 # list of specialist utensils required (optional)
 utensils:
