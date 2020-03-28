@@ -1,0 +1,10 @@
+baseURL: http://example.org/
+languageCode: en-us
+title: Cookbook
+enableemoji: true
+
+
+taxonomies:
+  ingredient: ingredients
+  category: categories
+  tag: tags

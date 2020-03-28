@@ -1,0 +1,29 @@
+{{ define "main" }}
+<h1 class="title">{{ .Title }}</h1>
+<p>Here are the starters.</p>
+<ul class="posts">
+  {{ range where (where .Site.RegularPages "Section" "starters") ".File.Ext" "md" | first 20  }}
+  <li class="post">
+    <a href="{{ .Permalink }}">
+      <date>{{ .Date.Format "02.01.2006" }}</date>
+      <span {{ if .Draft }}style="background-color: yellow;"{{ end }}>{{ .Title }}</span>
+    </a>
+  </li>
+  {{ end }}
+</ul>
+
+<br /><br /><br /><br />
+
+<p>Here are the mains.</p>
+<ul class="posts">
+  {{ range where (where .Site.RegularPages "Section" "mains") ".File.Ext" "md" | first 20  }}
+  <li class="post">
+    <a href="{{ .Permalink }}">
+      <date>{{ .Date.Format "02.01.2006" }}</date>
+      <span {{ if .Draft }}style="background-color: yellow;"{{ end }}>{{ .Title }}</span>
+    </a>
+  </li>
+  {{ end }}
+</ul>
+
+{{ end }}

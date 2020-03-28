@@ -1,2 +1,1 @@
-# hugo-cookbook
-Cookbook with Hugo
+# themeless-gitless-intro-hugo

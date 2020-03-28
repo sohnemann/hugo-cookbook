@@ -1,0 +1,127 @@
+{{ define "main" }}
+<div class="container">
+  <h1 class="title">{{ .Title }}
+    <br>
+    <span class="subtitle">{{ .Params.Subtitle }}</span>
+  </h1>
+
+  {{ if isset .Params "coverimage" }}
+  <img class="coverimage" src="{{ .Params.coverimage }}"></img>
+  {{ end }}
+
+
+  <div class="information">
+    {{ if isset .Params "healthlevel" }}
+    <div class="healthlevel">
+      <svg class="icon">
+        <use xlink:href="/fontawesome-free-5.13.0-web/sprites/solid.svg#heart"></use>
+      </svg>
+      {{ if eq .Params.healthlevel 1 }}
+      <div class="level1">healthy</div>
+      {{ else if (eq .Params.healthlevel 2) }}
+      <div class="level2">not so healthy</div>
+      {{ else if (eq .Params.healthlevel 3) }}
+      <div class="level3">unhealthy</div>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    {{ if isset .Params "servings" }}
+    <div class="servings">
+      <svg class="icon">
+        <use xlink:href="/fontawesome-free-5.13.0-web/sprites/solid.svg#utensils"></use>
+      </svg>
+      {{ if eq .Params.servings 1 }}
+      {{ .Params.servings }} serving
+      {{ else }}
+      {{ .Params.servings }} servings
+      {{ end }}
+    </div>
+    {{ end }}
+
+    {{ if isset .Params "duration" }}
+    <div class="duration">
+      <svg class="icon">
+        <use xlink:href="/fontawesome-free-5.13.0-web/sprites/solid.svg#clock"></use>
+      </svg>
+      {{ if eq .Params.duration 1 }}
+      {{ .Params.duration }} min
+      {{ else }}
+      {{ .Params.duration }} mins
+      {{ end }}
+    </div>
+    {{ end }}
+
+
+    {{ if isset .Params "date" }}
+    <div class="date">
+      <svg class="icon">
+        <use xlink:href="/fontawesome-free-5.13.0-web/sprites/solid.svg#calendar-alt"></use>
+      </svg>
+      {{ .Params.date.Format "2.1.2006" }}
+    </div>
+    {{ end }}
+
+    {{ if isset .Params "author" }}
+    <div class="author">
+      <svg class="icon">
+        <use xlink:href="/fontawesome-free-5.13.0-web/sprites/solid.svg#user"></use>
+      </svg>
+      {{ title .Params.author }}
+    </div>
+    {{ end }}
+  </div>
+
+  <div class="wrapper">
+    <div class="items">
+
+      <div class="ingredients">
+        <table>
+          <th class="table_header">Ingredients</th>
+          {{ range .Params.ingredients  }}
+          <tr>
+            <td>{{ . }}</td>
+          </tr>
+          {{ end }}
+        </table>
+      </div>
+
+      <div class="utensils">
+        <table>
+          <th class="table_header">Utensils</th>
+          {{ range .Params.utensils }}
+          <tr>
+            <td>{{ . }}</td>
+          </tr>
+          {{ end }}
+        </table>
+      </div>
+</div>
+
+    <div class="content">
+      <h4>Instructions</h4>
+      {{ .Content }}
+    </div>
+</div>
+</div>
+
+
+<!--  <div class="tags">
+    {{ if isset .Params "tags" }}
+    <ul>
+      {{ range sort .Params.tags }}
+      <li><svg class="icon">
+          <use xlink:href="/fontawesome-free-5.13.0-web/sprites/solid.svg#tag"></use>
+        </svg>
+        <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">
+
+
+          {{ . }}</a> </li>
+      {{ end }}
+    </ul>
+    {{ end }}
+  </div>-->
+
+
+</div>
+{{ end }}
