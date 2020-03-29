@@ -24,6 +24,7 @@ sections:
   label: Starters
   create: all
   match: "**/*"
+  new_doc_ext: ".md"
 - type: directory
   path: content/mains
   label: Mains
