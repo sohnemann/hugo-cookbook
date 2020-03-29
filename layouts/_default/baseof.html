@@ -1,49 +1,51 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    {{ $styles := resources.Get "style.scss" | toCSS  }}
-    <link rel="stylesheet" href="{{ $styles.Permalink }}" type="text/css" />
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!--{{ $darkmodecss := resources.Get "darkmode.css" }}
+  {{ $styles := resources.Get "style.scss" | toCSS  }}
+  <link rel="stylesheet" href="{{ $styles.Permalink }}" type="text/css" />
+
+  <!--{{ $darkmodecss := resources.Get "darkmode.css" }}
     <link disabled id="dark-mode-theme" rel="stylesheet" type="text/css" href="{{ $darkmodecss.Permalink }}">
 -->
-    {{ $darkmodejs := resources.Get "darkmode.js" }}
-    <script type="text/javascript" src="{{ $darkmodejs.Permalink }}"></script>
+  {{ $darkmodejs := resources.Get "darkmode.js" }}
+  <script type="text/javascript" src="{{ $darkmodejs.Permalink }}"></script>
 
-    <!--<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.5/lib/darkmode-js.min.js"></script>
+  <!--<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.5/lib/darkmode-js.min.js"></script>
 -->
 
-    <title>{{ .Title }}</title>
-  </head>
-  <body>
+  <title>{{ .Title }}</title>
+</head>
 
-    <header class='header'>
-      <a class="logo" href="/">home</a>
-      <nav>
-        {{ range .Site.Sections }}
-          <a href="{{ .Permalink }}">
-          {{ .Title | lower }}
-          </a>
-        </li>
-        {{ end }}
-          <a onclick="darkmode.toggle();">  <svg class="icon">
-              <use xlink:href="/fontawesome-free-5.13.0-web/sprites/solid.svg#moon"></use>
-            </svg></a>
-      </nav>
-    </header>
-    {{ block "main" . }}{{ end }}
-    <script>
+<body>
+
+  <header class='header'>
+    <a class="logo" href="/">home</a>
+    <nav>
+      {{ range .Site.Sections }}
+      <a href="{{ .Permalink }}">
+        {{ .Title | lower }}
+      </a>
+      </li>
+      {{ end }}
+      <a class="dmswitch" onclick="darkmode.toggle();"> <svg class="icon">
+          <use xlink:href="/fontawesome-free-5.13.0-web/sprites/solid.svg#moon"></use>
+        </svg></a>
+    </nav>
+  </header>
+  {{ block "main" . }}{{ end }}
+  <script>
     var options = {
       bottom: '64px', // default: '32px'
       right: 'unset', // default: '32px'
       left: '32px', // default: 'unset'
       time: '0.5s', // default: '0.3s'
       mixColor: '#fff', // default: '#fff'
-      backgroundColor: '#fff',  // default: '#fff'
-      buttonColorDark: '#100f2c',  // default: '#100f2c'
+      backgroundColor: '#fff', // default: '#fff'
+      buttonColorDark: '#100f2c', // default: '#100f2c'
       buttonColorLight: '#fff', // default: '#fff'
       saveInCookies: true, // default: true,
       label: "", // default: ''
@@ -51,9 +53,8 @@
     }
 
     const darkmode = new Darkmode(options);
+  </script>
 
+</body>
 
-    </script>
-
-  </body>
 </html>

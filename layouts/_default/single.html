@@ -1,26 +1,52 @@
 {{ define "main" }}
 <div class="container">
-  <h1 class="title">{{ .Title }}
-    <br>
-    <span class="subtitle">{{ .Params.Subtitle }}</span>
-  </h1>
-
+  <h1 class="title">{{ .Title }}</h1>
+<div class="subheading">
+  <h3>{{ if le .Params.rating 5}}
+  {{ with .Params.rating }}
+  <div class="rating">
+  {{ range (seq (.))}}
+    <svg class="icon active-star">
+      <use xlink:href="/fontawesome-free-5.13.0-web/sprites/solid.svg#star"></use>
+    </svg>
+    {{ end }}
+    {{ range seq (sub . 5)}}
+    <svg class="icon inactive-star">
+      <use xlink:href="/fontawesome-free-5.13.0-web/sprites/solid.svg#star"></use>
+    </svg>
+    {{ end }}
+  </div>
+  {{ end }}
+{{ end }}
+<span class="subtitle">{{ .Params.Subtitle }}</span><h3>
+</div>
   {{ if isset .Params "coverimage" }}
   <img class="coverimage darkmode-ignore" src="{{ .Params.coverimage }}"></img>
   {{ end }}
 
 
   <div class="information">
+
+
+
+
     {{ if isset .Params "healthlevel" }}
     <div class="healthlevel">
-      <svg class="icon">
+      {{ if eq .Params.healthlevel 1 }}
+      <svg class="icon iconlevel1">
         <use xlink:href="/fontawesome-free-5.13.0-web/sprites/solid.svg#heart"></use>
       </svg>
-      {{ if eq .Params.healthlevel 1 }}
       <div class="level1">healthy</div>
       {{ else if (eq .Params.healthlevel 2) }}
+      <svg class="icon iconlevel2">
+        <use xlink:href="/fontawesome-free-5.13.0-web/sprites/solid.svg#heart"></use>
+      </svg>
       <div class="level2">not so healthy</div>
+
       {{ else if (eq .Params.healthlevel 3) }}
+      <svg class="icon iconlevel3">
+        <use xlink:href="/fontawesome-free-5.13.0-web/sprites/solid.svg#heart"></use>
+      </svg>
       <div class="level3">unhealthy</div>
       {{ end }}
     </div>
@@ -70,7 +96,7 @@
       {{ title . }}
     </div>
     {{ end }}
-  </div>
+</div>
 
   <div class="wrapper">
     <div class="items">

@@ -1,12 +1,14 @@
 {{ define "main" }}
 <div class="container">
-  <h1 class="title">{{ .Title }}</h1>
+  <h1 class="title">  <svg class="icon">
+      <use xlink:href="/fontawesome-free-5.13.0-web/sprites/solid.svg#tag"></use>
+    </svg> {{ .Title }}</h1>
   <ul class="posts">
     {{ range .Pages }}
     <li class="post">
       <a href="{{ .Permalink }}">
-        <date>{{ .Date.Format "02.01.2006" }}</date>
-        <span>{{ .Title }}</span>
+        <!--<date>{{ .Date.Format "02.01.2006" }}</date>-->
+        <span><!--{{ .Section | title }} -->{{ .Title }}</span>
       </a>
     </li>
     {{ end }}
@@ -14,5 +16,3 @@
   <ul>
 </div>
 {{ end }}
-
-

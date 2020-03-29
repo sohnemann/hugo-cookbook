@@ -7,7 +7,7 @@ title: Lemon Pepper Chicken
 coverimage: lemon-pepper-chicken.jpg
 
 # shows a subtitle under the heading
-subtitle: ""
+subtitle: "really tasty!"
 
 # here you can add some meaningful tags
 tags:
@@ -35,6 +35,9 @@ date: 2020-03-28
 
 # who added this recipe to the cookbook?
 author: sarah
+
+# rating between 1 and 5
+rating: 5
 
 # list of the ingredients used
 ingredients:
