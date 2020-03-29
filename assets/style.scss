@@ -4,8 +4,12 @@ font-family: "Roboto";
 src: url("/Roboto/Roboto-Light.ttf");
 }
 
-$highlight: navy;
+$body_background_color: white;
+$highlight_color: #7dbd96;//#4f8b60;
+$info_color: red;
 $grey: rgba(200,200,200,0.2);
+$table_even_color: #8ccfa687;
+$table_odd_color: #f6f6f6;
 $link_font: "Rototo";
 $title_font: "Roboto";
 $content_font: "Roboto";
@@ -27,6 +31,7 @@ html {
   margin: 0 auto;
   padding: 1.5em;
   font-family: monospace, monospace;
+  background-color: $body_background_color;
 }
 
 @media (min-width: 768px) {
@@ -47,7 +52,7 @@ h4 {
 }
 
 a {
-  color: $highlight;
+  color: $highlight_color;
   text-decoration: none;
   font-size: 1rem;
   //font-family: $link_font;
@@ -102,19 +107,20 @@ table {
     table-layout: fixed;
     width: 100%;
   }
-  tr:nth-child(even) { background-color: $grey; }
+  tr:nth-child(even) { background-color: $table_even_color;}
+  tr:nth-child(odd) { background-color: $table_odd_color;}
+  tr:first-child {background-color: $body_background_color;}
+
   tbody {
     display: block;
     //max-height: 70vh;
     overflow-y: auto;
   }
-  td, th { padding: 0.25em; }
+  td{ padding: 0.25em; }
 }
 
 table, .highlight > pre, pre.example {
   max-height: 70vh;
-  margin: 1em 0;
-  padding: 1em;
   padding-right: 0;
   overflow: auto;
   font-size: 0.90em;
@@ -161,7 +167,7 @@ figure {
   .footnote-body {
     margin: 1em 0;
     padding: 0 1em;
-    border:1px dashed transparentize($highlight, 0.7);
+    border:1px dashed transparentize($highlight_color, 0.7);
     background-color: $grey;
     p:only-child { margin: 0.2em 0; }
   }
@@ -181,6 +187,7 @@ header {
 }
 
 .coverimage {
+  isolation: isolate; // for darkmode.js
   height: auto;
   width: 100%;
 }
@@ -188,7 +195,7 @@ header {
 .icon {
   width: 0.85em;
   height: 0.85em;
-  fill: navy;
+  fill: $highlight_color;
   display: inline;
 }
 
@@ -204,7 +211,7 @@ header {
 .healthlevel , .servings , .duration , .date , .author {
   display: inline-block;
   vertical-align: middle;
-  color: navy;
+  color: $info_color;
   margin-right: 1.4em;
 }
 
@@ -223,6 +230,7 @@ display: inline-block;}
 }
 
 .table_header {
+  display: block;
   font-size: 1rem;
   font-family: $item_font;
   padding-bottom: 1rem;
@@ -249,7 +257,6 @@ white-space:nowrap;
 }
 
 .content {
-  margin-top: 2.35em;
   font-size: 1rem;
   width: 50%;
    float: left;
@@ -261,6 +268,7 @@ white-space:nowrap;
 .wrapper {
   //border : 2px solid #000;
   overflow:hidden;
+  margin-top: 2rem;
 }
 
 .wrapper div {
@@ -269,7 +277,10 @@ white-space:nowrap;
 }
 
 @media screen and (max-width: 1000px) {
-   .items {
+  .information {
+    padding-left: 0.3em;
+  }
+  .items {
     float: none;
     margin-right:0;
     width:auto;
@@ -280,24 +291,10 @@ white-space:nowrap;
 }
 
 
-/*.tags {
-  position: relative;
-  vertical-align: bottom;
-               bottom:0;
-  font-family: $tags_font;
-
-  ul {
-
-
-    bottom: 0;
-    //margin-top: 1em;
-    margin-left: 0 !important;
-  }
-}*/
-
-.darkmode--activated .icon,.duration, .date, .level1,.level2,.level3 ,.servings, .author ,a, p, li {
+.darkmode--activated .icon,.duration, .date, .level1,.level2,.level3 ,.servings, .author,a, p, li {
   color: #000;
   fill: black;
+
 }
 
 .darkmode-toggle{

@@ -14,7 +14,8 @@ html {
   word-wrap: break-word;
   margin: 0 auto;
   padding: 1.5em;
-  font-family: monospace, monospace; }
+  font-family: monospace, monospace;
+  background-color: white; }
 
 @media (min-width: 768px) {
   html {
@@ -30,7 +31,7 @@ h4 {
   margin: 0rem 0 0rem 0; }
 
 a {
-  color: navy;
+  color: #7dbd96;
   text-decoration: none;
   font-size: 1rem; }
   a:hover, a:focus, a:active {
@@ -81,17 +82,19 @@ table {
     table-layout: fixed;
     width: 100%; }
   table tr:nth-child(even) {
-    background-color: rgba(200, 200, 200, 0.2); }
+    background-color: #8ccfa687; }
+  table tr:nth-child(odd) {
+    background-color: #f6f6f6; }
+  table tr:first-child {
+    background-color: white; }
   table tbody {
     display: block;
     overflow-y: auto; }
-  table td, table th {
+  table td {
     padding: 0.25em; }
 
 table, .highlight > pre, pre.example {
   max-height: 70vh;
-  margin: 1em 0;
-  padding: 1em;
   padding-right: 0;
   overflow: auto;
   font-size: 0.90em;
@@ -130,7 +133,7 @@ figure {
 .footnote-definition .footnote-body {
   margin: 1em 0;
   padding: 0 1em;
-  border: 1px dashed rgba(0, 0, 128, 0.3);
+  border: 1px dashed rgba(125, 189, 150, 0.3);
   background-color: rgba(200, 200, 200, 0.2); }
   .footnote-definition .footnote-body p:only-child {
     margin: 0.2em 0; }
@@ -146,13 +149,14 @@ header {
     margin-left: 1rem; }
 
 .coverimage {
+  isolation: isolate;
   height: auto;
   width: 100%; }
 
 .icon {
   width: 0.85em;
   height: 0.85em;
-  fill: navy;
+  fill: #7dbd96;
   display: inline; }
 
 .information {
@@ -164,7 +168,7 @@ header {
 .healthlevel, .servings, .duration, .date, .author {
   display: inline-block;
   vertical-align: middle;
-  color: navy;
+  color: red;
   margin-right: 1.4em; }
 
 /*.level1 {color: green;
@@ -180,6 +184,7 @@ display: inline-block;}
   display: inline-block; }
 
 .table_header {
+  display: block;
   font-size: 1rem;
   font-family: "Roboto";
   padding-bottom: 1rem; }
@@ -200,7 +205,6 @@ display: inline-block;}
   width: auto; }
 
 .content {
-  margin-top: 2.35em;
   font-size: 1rem;
   width: 50%;
   float: left;
@@ -208,9 +212,12 @@ display: inline-block;}
   margin-bottom: 1rem; }
 
 .wrapper {
-  overflow: hidden; }
+  overflow: hidden;
+  margin-top: 2rem; }
 
 @media screen and (max-width: 1000px) {
+  .information {
+    padding-left: 0.3em; }
   .items {
     float: none;
     margin-right: 0;
@@ -218,20 +225,6 @@ display: inline-block;}
   .content {
     width: auto; } }
 
-/*.tags {
-  position: relative;
-  vertical-align: bottom;
-               bottom:0;
-  font-family: $tags_font;
-
-  ul {
-
-
-    bottom: 0;
-    //margin-top: 1em;
-    margin-left: 0 !important;
-  }
-}*/
 .darkmode--activated .icon, .duration, .date, .level1, .level2, .level3, .servings, .author, a, p, li {
   color: #000;
   fill: black; }
