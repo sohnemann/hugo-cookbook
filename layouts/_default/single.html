@@ -1,25 +1,26 @@
 {{ define "main" }}
 <div class="container">
   <h1 class="title">{{ .Title }}</h1>
-<div class="subheading">
-  <h3>{{ if le .Params.rating 5}}
-  {{ with .Params.rating }}
-  <div class="rating">
-  {{ range (seq (.))}}
-    <svg class="icon active-star">
-      <use xlink:href="/fontawesome-free-5.13.0-web/sprites/solid.svg#star"></use>
-    </svg>
-    {{ end }}
-    {{ range seq (sub . 5)}}
-    <svg class="icon inactive-star">
-      <use xlink:href="/fontawesome-free-5.13.0-web/sprites/solid.svg#star"></use>
-    </svg>
-    {{ end }}
+  <div class="subheading">
+    <h3>{{ if le .Params.rating 5}}
+      {{ with .Params.rating }}
+      <div class="rating">
+        {{ range (seq (.))}}
+        <svg class="icon active-star">
+          <use xlink:href="/fontawesome-free-5.13.0-web/sprites/solid.svg#star"></use>
+        </svg>
+        {{ end }}
+        {{ range seq (sub . 5)}}
+        <svg class="icon inactive-star">
+          <use xlink:href="/fontawesome-free-5.13.0-web/sprites/solid.svg#star"></use>
+        </svg>
+        {{ end }}
+      </div>
+      {{ end }}
+      {{ end }}
+      <span class="subtitle">{{ .Params.Subtitle }}</span>
+      <h3>
   </div>
-  {{ end }}
-{{ end }}
-<span class="subtitle">{{ .Params.Subtitle }}</span><h3>
-</div>
   {{ if isset .Params "coverimage" }}
   <img class="coverimage darkmode-ignore" src="{{ .Params.coverimage }}"></img>
   {{ end }}
@@ -96,50 +97,50 @@
       {{ title . }}
     </div>
     {{ end }}
-</div>
+  </div>
 
   <div class="wrapper">
     <div class="items">
 
-{{ if isset .Params "ingredients" }}
-<div class="ingredients">
-  <table>
-    <th class="table_header">Ingredients</th>
-{{ range .Params.ingredients }}
-<tr>
-    {{ if isset . 1}}
-    <td class="amount">{{ index . 0}}</td>
-    <td class="ingredient">{{ index . 1}}</td>
-  {{ else }}
-  <td class="amount"></td>
-  <td class="ingredient">{{ index . 0}}</td>
-  {{ end }}
-</tr>
-{{ end }}
-  </table>
-</div>
-{{ end }}
+      {{ if isset .Params "ingredients" }}
+      <div class="ingredients">
+        <table>
+          <th class="table_header">Ingredients</th>
+          {{ range .Params.ingredients }}
+          <tr>
+            {{ if isset . 1}}
+            <td class="amount">{{ index . 0}}</td>
+            <td class="ingredient">{{ index . 1}}</td>
+            {{ else }}
+            <td class="amount"></td>
+            <td class="ingredient">{{ index . 0}}</td>
+            {{ end }}
+          </tr>
+          {{ end }}
+        </table>
+      </div>
+      {{ end }}
 
-{{ with .Params.utensils }}
-<div class="utensils">
-  <table>
-    <th class="table_header">Utensils</th>
-    {{ range . }}
-    <tr>
-      <td>{{ . }}</td>
-    </tr>
-    {{ end }}
-  </table>
-</div>
-{{ end }}
+      {{ with .Params.utensils }}
+      <div class="utensils">
+        <table>
+          <th class="table_header">Utensils</th>
+          {{ range . }}
+          <tr>
+            <td>{{ . }}</td>
+          </tr>
+          {{ end }}
+        </table>
+      </div>
+      {{ end }}
 
-</div>
+    </div>
 
     <div class="content">
       <h4>Instructions</h4>
       {{ .Content }}
     </div>
-</div>
+  </div>
 </div>
 
 
