@@ -45,4 +45,5 @@ fields:
   name: utensils
   label: utensils
 pages:
+- content/mains/pumpkin-soup.md
 - content/soups/pumpkin-soup/pumpkin-soup.md
