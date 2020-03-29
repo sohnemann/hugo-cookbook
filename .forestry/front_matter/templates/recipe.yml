@@ -11,6 +11,9 @@ fields:
 - type: text
   name: subtitle
   label: subtitle
+- type: number
+  name: rating
+  label: rating
 - type: list
   name: tags
   label: tags
@@ -35,9 +38,6 @@ fields:
 - type: text
   name: author
   label: author
-- type: number
-  name: rating
-  label: rating
 - type: list
   name: ingredients
   label: ingredients
