@@ -23,7 +23,7 @@
     <header class='header'>
       <a class="logo" href="/">home</a>
       <nav>
-        {{ range .Pages }}
+        {{ range .Site.Sections }}
           <a href="{{ .Permalink }}">
           {{ .Title | lower }}
           </a>

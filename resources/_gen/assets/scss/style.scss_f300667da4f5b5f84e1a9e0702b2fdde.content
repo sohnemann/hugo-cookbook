@@ -229,6 +229,15 @@ display: inline-block;}
   color: #000;
   fill: black; }
 
+.darkmode--activated tr:nth-child(even) {
+  background-color: #dbd9d9; }
+
+.darkmode--activated tr:nth-child(odd) {
+  background-color: #fff; }
+
+.darkmode--activated .isdraft {
+  background-color: darkgray !important; }
+
 .darkmode-toggle {
   color: white; }
 
