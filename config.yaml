@@ -1,4 +1,6 @@
-baseURL: http://192.168.0.16:1313/
+#baseURL: "//1313-e03afcca-52f2-49b9-bc98-8e80ef5ac45e.ws-eu01.gitpod.io"
+baseURL: https://localhost:1313/
 languageCode: en-us
 title: Cookbook
 pluralizelisttitles: false
+#relativeURLs: true
