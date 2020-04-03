@@ -6,7 +6,7 @@
   <ul class="posts">
     {{ range .Pages }}
     <li class="post">
-      <a href="{{ .Permalink }}">
+      <a href="{{ .RelPermalink }}">
         <!--<date>{{ .Date.Format "02.01.2006" }}</date>-->
         <span><!--{{ .Section | title }} -->{{ .Title }}</span>
       </a>

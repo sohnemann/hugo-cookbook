@@ -36,7 +36,7 @@ duration: 90
 date: 2020-03-28
 
 # who added this recipe to the cookbook?
-author: julian
+author:
 
 # list of the ingredients used
 ingredients:

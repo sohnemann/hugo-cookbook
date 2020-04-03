@@ -34,7 +34,7 @@ duration: 50
 date: 2020-03-28
 
 # who added this recipe to the cookbook?
-author: sarah
+author:
 
 # rating between 1 and 5
 rating: 5

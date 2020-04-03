@@ -3,7 +3,7 @@
 <ul class="posts">
   {{ range where (where .Site.RegularPages "Section" "mains") ".File.Ext" "md" }}
   <li class="post">
-    <a href="{{ .Permalink }}">
+    <a href="{{ .RelPermalink }}">
       <date>{{ .Date.Format "02.01.2006" }}</date>
       <span {{ if .Draft }}class="isdraft" style="background-color: yellow;"{{ end }}>{{ .Title }}</span>
     </a>
