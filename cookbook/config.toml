@@ -1,0 +1,4 @@
+baseURL = "/"
+title = "Cookbook"
+languageCode = "en-us"
+theme = "cookbook"
