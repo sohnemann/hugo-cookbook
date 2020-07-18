@@ -1,0 +1,22 @@
+{
+  "name": "hugo-cookbook",
+  "version": "1.0.0",
+  "description": "cookbook with hugo",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "keywords": [
+    "cookbook"
+  ],
+  "author": "sohnemann",
+  "license": "ISC",
+  "dependencies": {
+    "lunr": "^2.3.8",
+    "lunr-languages": "^1.4.0"
+  }
+}

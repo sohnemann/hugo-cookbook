@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cookbook</title>
+    <link>/</link>
+    <description>Recent content on Cookbook</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 28 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Brötchen</title>
+      <link>/baking/br%C3%B6tchen/</link>
+      <pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/baking/br%C3%B6tchen/</guid>
+      <description> Lorem ipsum  </description>
+    </item>
+    
+    <item>
+      <title>Lemon Pepper Chicken</title>
+      <link>/mains/lemon-pepper-chicken/</link>
+      <pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/mains/lemon-pepper-chicken/</guid>
+      <description>Heat butter and oil in a large pot.
+Cook leek, capsicum, cauliflower and salt for about
+4 minutes, until they have softened.
+  Pat the chicken dry and add it to a large bowl with flour, pepper, lemon zest and garlic.
+Toss to coat chicken and set aside.
+  Add bulgur wheat to the veggies.
+Stir and cook for 1 minute, until the bulgur wheat is coated in oil and butter.</description>
+    </item>
+    
+    <item>
+      <title>Lentil Soup</title>
+      <link>/mains/lentil-soup/</link>
+      <pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/mains/lentil-soup/</guid>
+      <description> Wash the lentils  </description>
+    </item>
+    
+    <item>
+      <title>Pizza</title>
+      <link>/soups/pizza/</link>
+      <pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/soups/pizza/</guid>
+      <description>UIUAA </description>
+    </item>
+    
+    <item>
+      <title>Pizza</title>
+      <link>/starters/pizza/</link>
+      <pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/starters/pizza/</guid>
+      <description>UIUAA </description>
+    </item>
+    
+    <item>
+      <title>Spinach Lasagna</title>
+      <link>/soups/spinach-lasagna/</link>
+      <pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/soups/spinach-lasagna/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tag2 on Cookbook</title>
+    <link>/tags/tag2/</link>
+    <description>Recent content in tag2 on Cookbook</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 28 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/tag2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Pizza</title>
+      <link>/soups/pizza/</link>
+      <pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/soups/pizza/</guid>
+      <description>UIUAA </description>
+    </item>
+    
+    <item>
+      <title>Pizza</title>
+      <link>/starters/pizza/</link>
+      <pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/starters/pizza/</guid>
+      <description>UIUAA </description>
+    </item>
+    
+    <item>
+      <title>Spinach Lasagna</title>
+      <link>/soups/spinach-lasagna/</link>
+      <pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/soups/spinach-lasagna/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Starters on Cookbook</title>
+    <link>/starters/</link>
+    <description>Recent content in Starters on Cookbook</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 28 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/starters/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Pizza</title>
+      <link>/starters/pizza/</link>
+      <pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/starters/pizza/</guid>
+      <description>UIUAA </description>
+    </item>
+    
+  </channel>
+</rss>

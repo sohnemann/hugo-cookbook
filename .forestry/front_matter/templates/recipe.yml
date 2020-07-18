@@ -1,0 +1,52 @@
+---
+label: Recipe
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: file
+  name: coverimage
+  label: coverimage
+- type: text
+  name: subtitle
+  label: subtitle
+- type: number
+  name: rating
+  label: rating
+  config:
+    min: '0'
+    max: '5'
+- type: list
+  name: tags
+  label: tags
+- type: text
+  name: country
+  label: country
+- type: boolean
+  name: copyrighted
+  label: copyrighted
+- type: number
+  name: healthlevel
+  label: healthlevel
+- type: number
+  name: servings
+  label: servings
+- type: number
+  name: duration
+  label: duration
+- type: datetime
+  name: date
+  label: date
+- type: text
+  name: author
+  label: author
+- type: list
+  name: ingredients
+  label: ingredients
+- type: text
+  name: utensils
+  label: utensils
+pages:
+- content/mains/pumpkin-soup.md
+- content/soups/pumpkin-soup/pumpkin-soup.md
